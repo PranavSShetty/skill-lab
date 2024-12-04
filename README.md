@@ -1,66 +1,73 @@
 # Mini Search Engine for Articles
 
-## Project Overview
+## Overview
 
-The Mini Search Engine is a lightweight, efficient backend solution for managing and searching articles. Designed to provide fast, relevance-based search capabilities, this project demonstrates a simple yet powerful search engine implementation using in-memory indexing and smart search algorithms.
+This project implements a backend search engine designed for efficient article management and searching. The solution provides a robust system for storing, indexing, and retrieving articles using in-memory technologies and smart search mechanisms.
 
-## Features
+## Key Features
 
 ### Article Management
-- Add articles with rich metadata (title, content, tags)
-- Unique identifier-based article retrieval
+- Add articles with comprehensive metadata
+- Store articles with unique identifiers
+- Support for article titles, content, and tags
 - Optional file system persistence
 
-### Advanced Search Functionality
-- Keyword-based search across article titles and content
-- Tag-based filtering
-- Relevance and date-based result sorting
-- Fast in-memory indexing
+### Search Capabilities
+- Full-text keyword search 
+- Search across article titles and content
+- Filter articles by tags
+- Sort search results by relevance or date
+- Quick in-memory indexing
 
-## Technical Specifications
+## API Endpoints and Postman Testing
 
-### Endpoints
+### 1. Add Article Endpoint
+- **Method:** POST /articles
+- **Postman Configuration:**
+  - Set request type to POST
+  - Body: raw JSON
+  - Add article details in request body
 
-1. **Add Article**
-   - **Endpoint:** `POST /articles`
-   - **Description:** Upload a new article with metadata
-   - **Parameters:** 
-     - Title
-     - Content
-     - Tags (optional)
+### 2. Search Articles Endpoint
+- **Method:** GET /articles/search
+- **Postman Configuration:**
+  - Set request type to GET
+  - Use query parameters for searching
+  - Apply filters and sorting options
 
-2. **Search Articles**
-   - **Endpoint:** `GET /articles/search`
-   - **Description:** Search and filter articles
-   - **Query Parameters:**
-     - Keyword
-     - Tag filter
-     - Sorting method (relevance/date)
+### 3. Retrieve Article Endpoint
+- **Method:** GET /articles/:id
+- **Postman Configuration:**
+  - Set request type to GET
+  - Add article ID in the URL path
 
-3. **Get Article**
-   - **Endpoint:** `GET /articles/:id`
-   - **Description:** Retrieve full details of a specific article
+## Postman Testing Tips
+- Verify response status codes
+- Check response body for correct data
+- Test various search scenarios
+- Validate error handling
 
-## Technical Design
+## Technical Architecture
 
-### Core Components
-- In-memory article storage using arrays
-- Custom indexing mechanism
-- Relevance calculation engine
-- Optional file system persistence
-
-### Search Algorithm
-- Utilizes keyword frequency for relevance scoring
+### Search Mechanism
+- Keyword frequency-based relevance scoring
 - Supports partial and full-text matching
-- Efficient O(n) search complexity
+- Efficient search complexity (O(n))
 
-### Performance Optimizations
-- Fast O(1) article retrieval by ID
-- Lightweight indexing strategy
-- Minimal memory overhead
+### Performance Characteristics
+- In-memory article storage
+- Fast article retrieval
+- Lightweight indexing approach
+- Minimal computational overhead
 
-## Key Technical Highlights
-- Flexible article management
-- Intelligent search capabilities
-- Scalable and modular architecture
-- Efficient in-memory processing
+### Design Principles
+- Modular architecture
+- Scalable search implementation
+- Flexible data management
+- Optimized for quick searches
+
+## Technical Innovations
+- Custom indexing strategy
+- Intelligent relevance calculation
+- Efficient data processing
+- Adaptable search framework

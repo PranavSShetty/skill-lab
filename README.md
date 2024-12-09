@@ -65,9 +65,3 @@ This project implements a backend search engine designed for efficient article m
 - Scalable search implementation
 - Flexible data management
 - Optimized for quick searches
-
-## Technical Innovations
-- Custom indexing strategy
-- Intelligent relevance calculation
-- Efficient data processing
-- Adaptable search framework
